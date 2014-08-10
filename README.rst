@@ -21,7 +21,8 @@ This project is licensed under the MIT license.
 Requirements
 ------------
 
- - PyQt5 or PyQt4 or PySide
+You need ```PyQt5``` or ```PyQt4``` or ```PySide``` installed on your system to make use of pyqode.qt, obviously.
+
 
 Installation
 ------------
