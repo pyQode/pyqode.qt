@@ -509,3 +509,6 @@ except ImportError:
 
     class QAction:
         pass
+
+    class QComboBox:
+        pass
