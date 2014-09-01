@@ -29,7 +29,7 @@ PySide
 Set the QT_API environment variable to 'PySide' (case insensitive)
 
 >>>import os
->>>os.environ['QT_API'] = 'PyQt4'
+>>>os.environ['QT_API'] = 'PySide'
 >>>from pyqode.qt import QtGui, QtWidgets, QtCore
 >>>print(QtWidgets.QWidget)
 
