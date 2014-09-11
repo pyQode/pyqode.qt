@@ -63,7 +63,8 @@ def setup_apiv2():
             sip.setapi("QString", 2)
             sip.setapi("QVariant", 2)
         except:
-            _logger.critical("pyQode: failed to set PyQt api to version 2"
+            logging.getLogger(__name__).critical(
+                "pyQode: failed to set PyQt api to version 2"
                 "\nTo solve this problem, import "
                 "pyqode before any other PyQt modules "
                 "in your main script...")
