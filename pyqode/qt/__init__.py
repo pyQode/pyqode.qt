@@ -40,7 +40,7 @@ import os
 import sys
 import logging
 
-__version__ = '1.0.1'
+__version__ = '1.1.0'
 
 
 QT_API = 'QT_API'
@@ -51,6 +51,23 @@ PYSIDE_API = 'pyside'
 
 class PythonQtError(Exception):
     pass
+
+def setup_apiv2():
+    """
+    Setup apiv2 on the chose binding.
+    """
+    # setup PyQt api to version 2
+    if sys.version_info[0] == 2:
+        try:
+            import sip
+            sip.setapi("QString", 2)
+            sip.setapi("QVariant", 2)
+        except:
+            logging.getLogger(__name__).critical(
+                "pyQode: failed to set PyQt api to version 2"
+                "\nTo solve this problem, import "
+                "pyqode before any other PyQt modules "
+                "in your main script...")
 
 
 if QT_API not in os.environ:
@@ -75,6 +92,7 @@ else:
             from pyqode.qt import *
             os.environ[QT_API] = PYQT5_API
         elif os.environ[QT_API].lower() == PYQT4_API.lower():
+            setup_apiv2()
             from PyQt4 import *
             os.environ[QT_API] = PYQT4_API
         elif os.environ[QT_API].lower() == PYSIDE_API.lower():
@@ -82,6 +100,5 @@ else:
             os.environ[QT_API] = PYSIDE_API
     except ImportError:
         raise PythonQtError('Cannot import %s' % os.environ[QT_API])
-
 
 logging.getLogger(__name__).info('using %s' % os.environ[QT_API])
