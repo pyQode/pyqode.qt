@@ -512,3 +512,6 @@ except ImportError:
 
     class QComboBox:
         pass
+
+    class QLineEdit:
+        pass

@@ -72,3 +72,6 @@ except ImportError:
 
     class QProcess:
         pass
+
+    class QProcessEnvironment:
+        pass
