@@ -1,20 +1,35 @@
 .. image:: https://raw.githubusercontent.com/pyQode/pyqode.core/master/doc/source/_static/pyqode-banner.png
 
-pyqode.qt
----------
+About
+-----
 
-Provides an abstraction layer on top of the various Qt bindings (PyQt5, PyQt4 and PySide).
 
-This package has been extracted from pyqode.core 2.0. 
+.. image:: http://img.shields.io/pypi/v/pyqode.qt.png
+   :target: https://pypi.python.org/pypi/pyqode.qt/
+   :alt: Latest PyPI version
 
-Basically, it lets you write frameworks or applications that can run on various different Qt backends.
+.. image:: http://img.shields.io/pypi/dm/pyqode.qt.png
+   :target: https://pypi.python.org/pypi/pyqode.qt/
+   :alt: Number of PyPI downloads
 
-The default layout is the PyQt5 layout (QtGui and QtWidgets have been split into two different modules). 
-This means that you write your application as if it was a PyQt5 application, pyqode.qt will then do the matching automatically if another API is used at runtime. 
 
-If you have multiple bindings installed on your system, PyQt5 (or PyQt4) will be used as the default unless told not to do so. You can tell *pyqode.qt* about your preferred bindings by setting up the *QT_API* environment variable. E.g, if you have PyQt5 and PyQt4 installed on your system and want to use PyQt4, just set *QT_API* to *pyqt4*.
+**pyqode.qt** is a `shim`_ that let you write libraries/applications that
+supports both PyQt and PySide.
 
-**Keep in mind that only the modules/classes needed for pyqode has beeen wrapped**. *You mind find that a specific module or class is missing. In this case, just open an issue or better, submit a pull request.*
+
+We provide support for PyQt5, PyQt4 and PySide using the PyQt5 layout (where
+the QtGui module has been split into QtGui and QtWidgets).
+
+
+Basically, you write your code as if you were using PyQt5 but import qt from
+``pyqode.qt`` instead of ``PyQt5``.
+
+- `Issue tracker`_
+- `Wiki`_
+- `API reference`_
+- `Contributing`_
+- `Changelog`_
+
 
 License
 -------
@@ -25,7 +40,8 @@ This project is licensed under the MIT license.
 Requirements
 ------------
 
-You need *PyQt5* or *PyQt4* or *PySide* installed on your system to make use of pyqode.qt, obviously.
+You need *PyQt5* or *PyQt4* or *PySide* installed on your system to make use
+of pyqode.qt, obviously.
 
 
 Installation
@@ -33,3 +49,16 @@ Installation
 ::
 
   pip install pyqode.qt
+
+Testing
+-------
+
+pyqode.qt is implicitely tested by pyqode.core
+
+
+.. _Changelog: https://github.com/pyQode/pyqode.qt/blob/master/CHANGELOG.rst
+.. _Contributing: https://github.com/pyQode/pyqode.qt/blob/master/CONTRIBUTING.rst
+.. _pyQode: https://github.com/pyQode/pyQode
+.. _Issue tracker: https://github.com/pyQode/pyQode/issues
+.. _Wiki: https://github.com/pyQode/pyQode/wiki
+.. _API reference: http://pyqodeqt.readthedocs.org/en/latest/
