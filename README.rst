@@ -56,6 +56,7 @@ Testing
 pyqode.qt is implicitely tested by pyqode.core
 
 
+.. _shim: http://en.wikipedia.org/wiki/Shim_%28computing%29
 .. _Changelog: https://github.com/pyQode/pyqode.qt/blob/master/CHANGELOG.rst
 .. _Contributing: https://github.com/pyQode/pyqode.qt/blob/master/CONTRIBUTING.rst
 .. _pyQode: https://github.com/pyQode/pyQode
