@@ -504,6 +504,12 @@ except ImportError:
     class QTabWidget:
         pass
 
+    class QSplitter:
+        pass
+
+    class QFileIconProvider:
+        pass
+
     class QMenu:
         pass
 
