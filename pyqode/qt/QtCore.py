@@ -19,10 +19,12 @@ try:
         from PyQt4.QtCore import pyqtSlot as Slot
         from PyQt4.QtCore import pyqtProperty as Property
         from PyQt4.QtCore import QT_VERSION_STR as __version__
+        from PyQt4.QtGui import QSortFilterProxyModel
     elif os.environ[QT_API] == PYSIDE_API:
         from PySide.QtCore import *
         import PySide.QtCore
         __version__ = PySide.QtCore.__version__
+        from PySide.QtGui import QSortFilterProxyModel
 except ImportError:
     # allowed when building doc with sphinx (on readthedocs)
     assert os.environ.get('SPHINX', None) == '1'
