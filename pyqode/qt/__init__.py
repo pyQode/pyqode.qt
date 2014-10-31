@@ -40,7 +40,7 @@ import os
 import sys
 import logging
 
-__version__ = '1.2.dev'
+__version__ = '2.4.dev'
 
 
 QT_API = 'QT_API'
