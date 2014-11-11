@@ -77,6 +77,7 @@ if QT_API not in os.environ:
         os.environ[QT_API] = PYQT5_API
     except ImportError:
         try:
+            setup_apiv2()
             import PyQt4
             os.environ[QT_API] = PYQT4_API
         except ImportError:
