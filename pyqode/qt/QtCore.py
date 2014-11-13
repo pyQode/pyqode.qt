@@ -77,3 +77,9 @@ except ImportError:
 
     class QProcessEnvironment:
         pass
+
+    class QSortFilterProxyModel:
+        pass
+
+    class QMimeData:
+        pass

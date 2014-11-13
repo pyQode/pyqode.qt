@@ -521,3 +521,9 @@ except ImportError:
 
     class QLineEdit:
         pass
+
+    class QTreeView:
+        pass
+
+    class QTreeWidget:
+        pass
