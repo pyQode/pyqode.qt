@@ -62,4 +62,4 @@ pyqode.qt is implicitely tested by pyqode.core
 .. _pyQode: https://github.com/pyQode/pyQode
 .. _Issue tracker: https://github.com/pyQode/pyQode/issues
 .. _Wiki: https://github.com/pyQode/pyQode/wiki
-.. _API reference: http://pyqodeqt.readthedocs.org/en/latest/
+.. _API reference: http://pythonhosted.org/pyqode.qt

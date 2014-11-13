@@ -1,50 +1,51 @@
 """
-This package is a shim library over the various qt bindings available .
+**pyqode.qt** is a shim over the various qt bindings. It is used to write
+qt bindings indenpendent library or application.
 
-It lets you write an application/library without worrying about the underlying
-qt api that is used. **PyQt4**, **PyQt5** and **PySide** are supported.
+The shim will automatically select the first available API (PyQt5, PyQt4 and
+finally PySide).
 
-It mimics the structure of PyQt5 but let you choose the binding to use through
-the ``QT_API`` environment variable.
-
-If you don't set the QT_API environment variable, pyqode.qt will first try
-with PyQt5 and will fallback to PyQt4 and eventually to PySide if imports error
-were raised.
+You can force the use of one specific bindings (e.g. if your application is
+using one specific bindings and you need to use library that use pyqode.qt) by
+setting up the ``QT_API`` environment variable.
 
 PyQt5
-~~~~~
++++++
 
-For pyqt5, you don't have to set anything as it will be used automatically.
+For pyqt5, you don't have to set anything as it will be used automatically::
 
->>>from pyqode.qt import QtGui, QtWidgets, QtCore
->>>print(QtWidgets.QWidget)
+    >>> from pyqode.qt import QtGui, QtWidgets, QtCore
+    >>> print(QtWidgets.QWidget)
+
 
 PyQt4
-~~~~~
++++++
 
-Set the ``QT_API environment variable to 'PyQt4' (case insensitive) before
-importing any python package.
+Set the ``QT_API`` environment variable to 'PyQt4' (case insensitive) before
+importing any python package::
 
->>>import os
->>>os.environ['QT_API'] = 'PyQt4'
->>>from pyqode.qt import QtGui, QtWidgets, QtCore
->>>print(QtWidgets.QWidget)
+    >>> import os
+    >>> os.environ['QT_API'] = 'PyQt4'
+    >>> from pyqode.qt import QtGui, QtWidgets, QtCore
+    >>> print(QtWidgets.QWidget)
+
 
 .. warning:: This requires to set the SIP api to version 2 (for strings and
     covariants). If you're using python2 you have to make sure the correct sip
     api is set before importing any PyQt4 module (pyqode.qt can take care of
     that for you but it must be imported before any PyQt4 module).
 
+
 PySide
-~~~~~~
+++++++
 
 Set the QT_API environment variable to 'PySide' (case insensitive) before
-importing pyqode.
+importing pyqode::
 
->>>import os
->>>os.environ['QT_API'] = 'PySide'
->>>from pyqode.qt import QtGui, QtWidgets, QtCore
->>>print(QtWidgets.QWidget)
+    >>> import os
+    >>> os.environ['QT_API'] = 'PySide'
+    >>> from pyqode.qt import QtGui, QtWidgets, QtCore
+    >>> print(QtWidgets.QWidget)
 
 """
 import os
@@ -73,7 +74,7 @@ class PythonQtError(Exception):
 
 def setup_apiv2():
     """
-    Setup apiv2 on the chose binding.
+    Setup apiv2 when using PyQt4 and Python2.
     """
     # setup PyQt api to version 2
     if sys.version_info[0] == 2:
