@@ -1,3 +1,6 @@
+"""
+Provides QtDesigner classes and functions.
+"""
 import os
 from pyqode.qt import QT_API
 from pyqode.qt import PYQT5_API

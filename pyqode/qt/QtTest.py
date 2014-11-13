@@ -1,3 +1,10 @@
+"""
+Provides QtTest and functions
+
+.. warning:: PySide is not supported here, that's why there is not unit tests
+    running with PySide.
+
+"""
 import os
 from pyqode.qt import QT_API
 from pyqode.qt import PYQT5_API
@@ -13,6 +20,5 @@ elif os.environ[QT_API] == PYQT4_API:
         @staticmethod
         def qWaitForWindowActive(QWidget):
             OldQTest.qWaitForWindowShown(QWidget)
-
 elif os.environ[QT_API] == PYSIDE_API:
     raise ImportError('QtTest support is incomplete for PySide')
