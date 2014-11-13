@@ -1,16 +1,22 @@
 .. image:: https://raw.githubusercontent.com/pyQode/pyQode/master/media/pyqode-banner.png
-
-About
------
-
-
-.. image:: http://img.shields.io/pypi/v/pyqode.qt.png
+|
+.. image:: https://pypip.in/version/pyqode.qt/badge.svg
    :target: https://pypi.python.org/pypi/pyqode.qt/
    :alt: Latest PyPI version
 
-.. image:: http://img.shields.io/pypi/dm/pyqode.qt.png
+.. image:: https://pypip.in/download/pyqode.qt/badge.svg
    :target: https://pypi.python.org/pypi/pyqode.qt/
    :alt: Number of PyPI downloads
+
+.. image:: https://pypip.in/py_versions/pyqode.qt/badge.svg
+   :target: https://pypi.python.org/pypi/pyqode.qt/
+   :alt: Supported python version
+   
+.. image:: https://pypip.in/license/pyqode.qt/badge.svg
+
+
+About
+-----
 
 
 **pyqode.qt** is a `shim`_ that let you write libraries/applications that
