@@ -119,7 +119,7 @@ if QT_API in os.environ:
     # check if the selected QT_API is available
     try:
         if os.environ[QT_API].lower() == PYQT5_API.lower():
-            from pyqode.qt import *
+            from PyQt5 import *
             os.environ[QT_API] = PYQT5_API
         elif os.environ[QT_API].lower() == PYQT4_API.lower():
             setup_apiv2()
