@@ -1,6 +1,13 @@
 Change log
 ==========
 
+2.4.0
+-----
+
+- fix missing call to setup_apiv2 when using pyqt4 + python2 and QT_API has
+  already been set
+- fix a similar issue with pyqt5
+
 1.1.0
 -----
 
