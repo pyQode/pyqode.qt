@@ -1,6 +1,14 @@
 Change log
 ==========
 
+2.4.1
+-----
+
+- add support for multiple qt api names: e.g. pyqt can now be used as well as pyqt4 to force the use of PyQt4
+  this improves compatiblity with IPython
+- fix a bug with pyside imports
+- improve auto-detection of available qt backend
+
 2.4.0
 -----
 
