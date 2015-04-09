@@ -54,3 +54,8 @@ doc/_build/
 
 .idea
 
+# stdeb
+*.tar.gz
+deb_dist
+*.usr
+*~

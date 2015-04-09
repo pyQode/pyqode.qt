@@ -3,6 +3,7 @@
 """
 Setup script for pyqode.core
 """
+import sys
 from setuptools import setup, find_packages
 
 
@@ -15,7 +16,12 @@ def read_version():
                     "'", '').replace('"', '')
 
 
+DESCRIPTION = 'Shim library that wraps PyQt5, PyQt4 and PySide'
+
+
 def readme():
+    if 'bdist_deb' in sys.argv:
+        return DESCRIPTION
     return str(open('README.rst').read())
 
 
@@ -29,8 +35,7 @@ setup(
     license='MIT',
     author='Colin Duquesnoy',
     author_email='colin.duquesnoy@gmail.com',
-    description='Provides an abstraction layer on top of the various Qt '
-                'bindings (PyQt5, PyQt4 and PySide)',
+    description=DESCRIPTION,
     long_description=readme(),
     classifiers=[
         'Development Status :: 5 - Production/Stable',
