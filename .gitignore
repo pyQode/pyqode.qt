@@ -59,3 +59,4 @@ doc/_build/
 deb_dist
 *.usr
 *~
+gpg_key

@@ -20,7 +20,7 @@ DESCRIPTION = 'Shim library that wraps PyQt5, PyQt4 and PySide'
 
 
 def readme():
-    if 'bdist_deb' in sys.argv:
+    if 'bdist_deb' in sys.argv or 'sdist_dsc' in sys.argv:
         return DESCRIPTION
     return str(open('README.rst').read())
 
