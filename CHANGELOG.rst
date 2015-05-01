@@ -1,6 +1,12 @@
 Change log
 ==========
 
+2.6.0
+-----
+
+- update version to follow the pyqode master version (no other changes except
+  the support for stdeb and bdist_wheel)
+
 2.5.0
 -----
 
