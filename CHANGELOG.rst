@@ -1,6 +1,11 @@
 Change log
 ==========
 
+2.7.0
+-----
+
+- update version to follow the pyqode master version (no other changes)
+
 2.6.0
 -----
 
