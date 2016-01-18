@@ -12,8 +12,12 @@ if os.environ[QT_API] in PYQT5_API:
         from PyQt5.QtWebKitWidgets import QWebView
         from PyQt5.QtWebKitWidgets import QWebPage
     except ImportError:
-        from PyQt5.QtWebEngineWidgets import QWebEngineView as QWebView
-        from PyQt5.QtWebEngineWidgets import QWebEnginePage as QWebPage
+        try:
+            from PyQt5.QtWebEngineWidgets import QWebEngineView as QWebView
+            from PyQt5.QtWebEngineWidgets import QWebEnginePage as QWebPage
+        except ImportError:
+            # neither QtWebKit nor QtWebEngine installed
+            pass
 elif os.environ[QT_API] in PYQT4_API:
     from PyQt4.QtWebKit import QWebView, QWebPage
 elif os.environ[QT_API] in PYSIDE_API:
