@@ -1,6 +1,11 @@
 Change log
 ==========
 
+2.8.0
+-----
+
+- add support for importing Qt Web widgets (either from QtWebKit or from QtWebEngine)
+
 2.7.0
 -----
 
