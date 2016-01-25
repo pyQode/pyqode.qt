@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'pyqode.qt'
-copyright = u'2014, Colin Duquesnoy'
+copyright = u'2014-2016, Colin Duquesnoy'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -267,7 +267,7 @@ texinfo_documents = [
 epub_title = u'pyqode'
 epub_author = u'Author'
 epub_publisher = u'Author'
-epub_copyright = u'2014, Author'
+epub_copyright = u'2014-2016, Author'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'pyqode'
